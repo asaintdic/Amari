@@ -9,8 +9,12 @@ class ApplicationController < Sinatra::Base
     set :session_secret, "password_security"
   end
 
-  get "/" do #g
+  get "/" do 
     erb :'/welcome'
+  end
+
+  get "/users/show" do
+    erb :'/users/show'
   end
   
   get "/logout" do
@@ -27,4 +31,5 @@ class ApplicationController < Sinatra::Base
       User.find(session[:user_id])
     end
   end
+
 end

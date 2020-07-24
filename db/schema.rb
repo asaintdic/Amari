@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200714191915) do
+ActiveRecord::Schema.define(version: 20200720221826) do
+
+  create_table "requests", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "gender"
+    t.string   "clothing_size"
+    t.string   "shoe_size"
+    t.string   "top"
+    t.string   "shoe"
+    t.string   "outerwear"
+    t.string   "bag"
+    t.string   "accessories"
+    t.integer  "user_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "username"

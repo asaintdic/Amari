@@ -1,0 +1,95 @@
+
+<h3> Clothing Request Form </h3><br>
+  <div class="row">
+    <form method="POST" action="/request/new">
+          <h6>Please enter your first and last name:</h6><br>
+            <div class="row">
+              <div class="input-field col s6">
+              <input id="first_name" type="text" class="validate">
+                <label for="first_name">First Name</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="last_name" type="text" class="validate">
+                <label for="last_name">Last Name</label>
+              </div>
+            </div>
+            <p>
+            <h6>Gender:</h6><br>
+            <p>
+          <label>
+            <input name="gender" value="womens" type="radio" />
+            <span>Womens</span>
+          </label>
+        </p>
+          <p>
+            <label>
+              <input name="gender" value="mens" type="radio" />
+              <span>Mens</span>
+            </label>
+          </p>
+          <p>
+          <label>
+            <input name="gender" value="neutral" type="radio" />
+            <span>Neutral</span>
+          </label>
+        </p>
+        
+        <div class="row">
+          <div class="input-field col s6">
+          <input id="clothing_size" type="text" class="validate">
+            <label for="clothing_size">Clothing Size</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="shoe_size" type="text" class="validate">
+            <label for="shoe_size">Shoe Size(ex:7.5w)</label>
+          </div>
+        </div>
+        <p>
+        <h6>Please select desired clothing types:</h6><br>
+        <label for="top">
+          <input id="top" type="checkbox" />
+          <span>Top</span>
+        </label>
+      </p>
+      <p>
+      <label for="bottom">
+        <input id="bottom" type="checkbox" />
+        <span>Bottom</span>
+      </label>
+      </p>
+      <p>
+      <label for="shoe">
+        <input id="shoe" type="checkbox" />
+        <span>Shoe</span>
+      </label>
+      </p>
+      <p>
+      <label for="outerwear">
+        <input id="outerwear" type="checkbox" />
+        <span>Outerwear</span>
+      </label>
+      </p>
+      <p>
+      <label for="bag">
+        <input id="bag" type="checkbox" />
+        <span>Bag</span>
+      </label>
+      </p>
+      <p>
+      <label for="accessories">
+        <input id="accessories" type="checkbox"  />
+        <span>Accessories</span>
+      </label>
+      </p>
+      
+
+      <br>
+      <div class="input-field col s12">
+      <h6>Any additional notes on the above request:</h6><br>
+      <textarea name="request" cols="70" rows="4"></textarea>
+      </fieldset>
+      <input type="submit" value="submit">Submit my information</button>
+  </div>
+</form>
+
+
