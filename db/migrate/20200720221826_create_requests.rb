@@ -1,16 +1,12 @@
 class CreateRequests < ActiveRecord::Migration
   def change
     create_table :requests do |t|
-      t.string :first_name
-      t.string :last_name
       t.string :gender
+      t.string :age
       t.string :clothing_size
       t.string :shoe_size
-      t.string :top
-      t.string :shoe
-      t.string :outerwear
-      t.string :bag
-      t.string :accessories
+      t.text   :add_info
+      
       t.integer :user_id
      
       t.timestamps null: false

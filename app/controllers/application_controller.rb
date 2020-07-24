@@ -16,11 +16,16 @@ class ApplicationController < Sinatra::Base
   get "/users/show" do
     erb :'/users/show'
   end
+
+  get "/failure" do
+    erb :"/failure"
+  end 
   
   get "/logout" do
     session.clear
     redirect "/"
   end
+
 
   helpers do
     def logged_in?
