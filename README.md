@@ -374,3 +374,6 @@ In Need
 
 
 
+<%current_user.requests.each do |req|%>
+   <p> <%= req.add_info %> <a class="waves-effect waves-light btn-small">Edit</a><a class="waves-effect waves-light btn-small">Delete</a></>
+<% end %>

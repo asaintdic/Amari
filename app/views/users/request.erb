@@ -1,13 +1,39 @@
-<h1> Buttons/ cards for new request or existing requests </h1>
-<form action="/request/new">
-    <button class="button button2"><a href="/users/request"></a>Request</button>
-   
-</form>
+<h4 class="center-align"> Manage your existing requests, or make a new request based on your needs</h4>
 
-<form action="/request/show">
-    <button class="button button2"><a href="/users/request"></a>My Existing Requests</button>
-   
-</form>
+<div class="row">
+<div class="col s6">
+      <div class="card teal accent-4">
+      <div class="card-content">
+       <span class="card-title activator white-text">NEW REQUEST<i class="material-icons right"></i></span>
+       <p><a href="/request/new">CLick Here</a></p>
+     </div>
+     <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">We got you<i class="material-icons right">close</i></span>
+      <p>Find clothing in your size for any season</p>
+      <p><a href="/request/new">New Request</a></p>
+    </div>
+  </div>  
+  </div>
+  
+    <div class="col s6 offset--s6">
+      <div class="card teal accent-4">
+      <div class="card-content">
+        <span class="card-title activator white-text">ALL REQUESTS<i class="material-icons right"></i></span>
+        <p><a href="/request/show">Click Here</a></p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Anytime, anywhere<i class="material-icons right">close</i></span>
+        <p>Manage your existing requests</p>
+        <p><a href="/request/show">All Requests</a></p>
+      </div>
+    </div>
+  </div>
+</div>      
 
 
-<h2> new request shows form, existing requests shows requests by user ID</h2>
+
+
+
+
+
+
