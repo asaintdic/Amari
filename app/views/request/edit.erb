@@ -1,16 +1,34 @@
 <h1> Edit form</h1>
 
-<form action="/request/<%= @request.id %>" method="post">
+ 
+ <p><% current_user.requests.each do |req| %>
+ <form action="/request/<%= req.id %>" method="post">
   <input type="hidden" name="_method" value="patch">
   <ul>
     <li>
-      <label for="title">Title</label>
-      <input id="title" type="text" name="article[title]" value="<%= @article.title %>" />
+      <label for="gender">Gender:</label>
+      <input id="gender" type="text" name="gender" value="<%= req.gender %>" />
     </li>
     <li>
-      <label for="content">Content</label>
-      <input id="content" type="text" name="article[content]"  value="<%= @article.content %>" />
+      <label for="age">Age</label>
+      <input id="age" type="text" name="age"  value="<%= req.age %>" />
     </li>
+    <li>
+    <label for="clothing_size">Clothing Size:</label>
+    <input id="clothing_size" type="text" name="clothing_size"  value="<%= req.clothing_size %>" />
+    <li>
+    <label for="shoe_size">Shoe Size</label>
+    <input id="shoe_size" type="text" name="shoe_size"  value="<%= req.shoe_size %>" />
+    <li>
+    <label for="add_info">Additional Info</label>
+    <input id="add_info" type="text" name="add_info"  value="<%= req.add_info %>" />
+  </li>
+  </li>
+  </li>
   </ul>
   <input type="submit" />
-</form> 
+</form>
+<% end %>
+</p>
+
+
