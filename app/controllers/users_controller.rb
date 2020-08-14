@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   get "/users/login" do
     erb :"/users/login"
   end
+  
   post "/users/login" do
     @user = User.find_by(username: params[:username])
     
@@ -23,9 +24,6 @@ class UsersController < ApplicationController
     erb :"/users/new"
   end
   
-  # get '/request/new' do
-  #   erb :'/request/new'
-  # end
   
   post "/users/new" do
     @user = User.new(first_name: params[:first_name], last_name: params[:last_name], email: params[:email], username: params[:username], password: params[:password])
