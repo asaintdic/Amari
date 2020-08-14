@@ -11,7 +11,6 @@ end
 
 post '/request/new' do 
     @req = Request.create(gender: params[:gender], age: params[:age], clothing_size: params[:clothing_size], shoe_size: params[:shoe_size], add_info: params[:add_info], user_id: params[:user_id])
-    # @req = current_user.requests.build(gender: params[:gender], age: params[:age], clothing_size: params[:clothing_size], shoe_size: params[:shoe_size], add_info: params[:add_info], user_id: params[:user_id])
     if @req.save
     redirect "/request/show"
     else
@@ -19,10 +18,6 @@ post '/request/new' do
     end
 end 
 
-
-# get "/request/show" do 
-#     erb :'/request/show'
-# end
 
 get '/request/:id' do
     @req = Request.find_by(params[:id])
@@ -48,7 +43,6 @@ end
 get "/request/:id/delete" do
     @req = Request.find_by(params[:id]) 
     @req.delete  
-    # Request.destroy(params[:id])
     redirect to "/request"
 end
 
