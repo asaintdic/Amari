@@ -13,3 +13,6 @@ Admin
 
 Beyond Clothing
 3)This was concieved with nonprofits like Goodwill and Well Cloth'd in mind which specifically deal with large quan tities of clothing and have the ability to match doantions to those in need. However, this could grow beyond clothing, managing requests, fulfillments, and donations in any capacity, of any type.
+
+
+
