@@ -29,6 +29,12 @@
  </div>
     <div class="wrapper">
      <div class="container grey lighten-4  z-depth-1">
+     <% flash.keys.each do |type| %>
+      <div data-alert class="flash <%= type %> alert-box radius">
+        <%= flash[type] %>
+        <a href="#" class="close">&times;</a>
+      </div>
+    <% end %>
         <%= yield %>
         <footer class="branding">
        <ul class="bottom left">

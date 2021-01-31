@@ -30,14 +30,15 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id 
       if params[:username] != ""
         if @user.save
-        redirect "/users/show"
+          redirect "/users/show"
         else
-        redirect "/failure"
+          flash[:notice] = "Login has failed, please enter valid username and password!"
+          redirect "/users/new"
         end
       else 
         redirect "/failure"
       end
-    redirect "/users/show"
+        redirect "/users/show"
   end
   
   get "/users/request" do 

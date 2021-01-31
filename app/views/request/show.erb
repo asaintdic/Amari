@@ -14,7 +14,14 @@
          <p>More: <%= @req.add_info %><i class="material-icons right"></i></p>
       </span>
          
-       <p><a class="waves-effect waves-light btn-small" href="/request/<%= @req.id %>/edit">Edit</a><a class="waves-effect waves-light btn-small" href="/request/<%= @req.id %>/delete">Delete</a></p>
+       <a class="waves-effect waves-light btn-small" href="/request/<%= @req.id %>/edit">Edit</a>
+        
+       <form action="/request/<%= @req.id %>/delete" method="post">
+        <input id="hidden" type="hidden" name="_method" value="delete">
+        <input type="submit" value="Delete">
+       </form>
+      
+
        
      </div>
      <div class="card-reveal">

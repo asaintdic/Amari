@@ -11,12 +11,12 @@ class RequestsController < ApplicationController
     end
 
     post '/request/new' do 
-    @req = current_user.requests.build(gender: params[:gender], age: params[:age], clothing_size: params[:clothing_size], shoe_size: params[:shoe_size], add_info: params[:add_info], user_id: params[:user_id])
-    if @req.save
-        redirect "/request/#{@req.id}"
-    else
-        redirect "/request/new"
-    end
+        @req = current_user.requests.build(gender: params[:gender], age: params[:age], clothing_size: params[:clothing_size], shoe_size: params[:shoe_size], add_info: params[:add_info], user_id: params[:user_id])
+        if @req.save
+            redirect "/request/#{@req.id}"
+        else
+            redirect "/request/new"
+        end
     end 
 
 
@@ -46,14 +46,13 @@ class RequestsController < ApplicationController
     end
 
 
-    get "/request/:id/delete" do
-        @req = Request.find_by_id(params[:id]) 
-        if current_user == @req.user_id
-          @req.delete  
+    delete "/request/:id/delete" do
+        @req = Request.find(params[:id])
+        if current_user.id == @req.user_id
+          @req.destroy 
           redirect  "/request"
         else
           redirect "/request"
         end
-
     end
 end
